@@ -3,13 +3,14 @@
   --card-background-color: #f1f1f1;
   --text-color: rgb(4, 24, 59);
   --shadow-color: #00000036;
-  --muted-color: rgba(16, 104, 255, 0.418);
+  --muted-color: rgb(100, 155, 250);
   --paragraph-color: rgb(90, 98, 112);
-  --primary-color: rgba(16, 104, 255);
-  --danger-color: rgb(253, 77, 136);
-  --success-color: rgb(83, 172, 48);
-  --warning-color: rgb(0, 44, 119);
-  --attention-color: rgb(255, 169, 8);
+  --primary-color: rgb(25, 80, 175);
+  --danger-color: rgb(255, 96, 149);
+  --success-color: rgb(108, 173, 83);
+  --warning-color: rgb(25, 80, 175);
+  --attention-color: rgb(250, 179, 48);
+  --happy-color: rgb(69, 156, 156);
 
   --font: "Raleway", sans-serif;
   --light-font: 200;
@@ -361,4 +362,131 @@ main .recent-orders a {
 /* ======================== RIGHT ===== */
 .right {
   margin-top: 1.4rem;
+}
+.right .top {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.right .top button {
+  display: none;
+}
+
+.right .theme-toggler {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: var(--border-redius-1);
+}
+
+.right .theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .theme-toggler span.active {
+  background: var(--muted-color);
+  color: var(--background-color);
+  border-radius: var(--border-redius-1);
+}
+
+.right .top .profile {
+  display: flex;
+  gap: 2rem;
+  text-align: right;
+}
+
+/*=====RECENT UPDATES====*/
+.right .recent-updates {
+  margin-top: 1rem;
+}
+
+.right .recent-updates h2 {
+  margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates {
+  background: var(--card-background-color);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .recent-updates .updates:hover {
+  box-shadow: none;
+}
+.right .recent-updates .updates .update {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+/*-------SALES ANALYTICS----*/
+.right .sales-analytics {
+  margin-top: 2rem;
+}
+.right .sales-analytics h2 {
+  margin-bottom: 0.8rem;
+}
+.right .sales-analytics h3 {
+  font-size: 1.1rem;
+}
+.right .sales-analytics .item {
+  background: var(--card-background-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--card-padding);
+  border-radius: var(--border-redius-3);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .sales-analytics .item:hover {
+  box-shadow: none;
+}
+.right .sales-analytics .item .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+
+.right .sales-analytics .item .icon {
+  padding: 0.6rem;
+  color: var(--card-background-color);
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+}
+.right .sales-analytics .item.offline .icon {
+  background: var(--happy-color);
+}
+.right .sales-analytics .item.costumers .icon {
+  background: var(--success-color);
+}
+.right .sales-analytics .add-product {
+  background: transparent;
+  border: 2px dashed var(--shadow-color);
+  color: var(--paragraph-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+.right .sales-analytics .add-product div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.right .sales-analytics .add-product div h3 {
+  font-size: 1rem;
 }
