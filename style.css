@@ -11,6 +11,8 @@
   --warning-color: rgb(25, 80, 175);
   --attention-color: rgb(250, 179, 48);
   --happy-color: rgb(69, 156, 156);
+  --icon-color: #f1f1f1;
+  --border-color: rgb(167, 178, 207);
 
   --font: "Raleway", sans-serif;
   --light-font: 200;
@@ -25,6 +27,19 @@
   --padding-1: 1.2rem;
 
   --box-shadow: 2px 7px 9px var(--shadow-color);
+}
+
+/*-----Dark theme----*/
+.dark-theme-variables {
+  --background-color: rgb(26, 28, 53);
+  --card-background-color: #474f6c;
+  --text-color: rgb(224, 224, 224);
+  --shadow-color: rgba(0, 0, 0, 0.274);
+  --box-shadow: 2px 7px 9px var(--shadow-color);
+  --paragraph-color: rgb(180, 180, 180);
+  --primary-color: rgb(224, 224, 224);
+  --icon-color: rgb(224, 224, 224);
+  --border-color: rgb(90, 96, 112);
 }
 
 * {
@@ -49,6 +64,7 @@ body {
   font-size: 0.88rem;
   user-select: none;
   overflow-x: hidden;
+  color: var(--text-color);
 }
 
 .container {
@@ -217,7 +233,7 @@ main {
 }
 main .date {
   display: inline-block;
-  background: var(--shadow-color);
+  background: var(--card-background-color);
   border-radius: var(--border-redius-1);
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
@@ -250,7 +266,7 @@ main .insights > div span {
   background: var(--warning-color);
   padding: 0.5rem;
   border-radius: 50%;
-  color: var(--card-background-color);
+  color: var(--icon-color);
   font-size: 2rem;
 }
 main .insights > div.expenses span {
@@ -374,6 +390,7 @@ main .recent-orders a {
 }
 
 .right .theme-toggler {
+  background: var(--shadow-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -391,7 +408,7 @@ main .recent-orders a {
   align-items: center;
   justify-content: center;
 }
-.right .theme-toggler span.active {
+.right .theme-toggler .active {
   background: var(--muted-color);
   color: var(--background-color);
   border-radius: var(--border-redius-1);
@@ -462,9 +479,9 @@ main .recent-orders a {
 
 .right .sales-analytics .item .icon {
   padding: 0.6rem;
-  color: var(--card-background-color);
+  color: var(--icon-color);
   border-radius: 50%;
-  background: var(--primary-color);
+  background: var(--warning-color);
   display: flex;
 }
 .right .sales-analytics .item.offline .icon {
@@ -475,7 +492,7 @@ main .recent-orders a {
 }
 .right .sales-analytics .add-product {
   background: transparent;
-  border: 2px dashed var(--shadow-color);
+  border: 2px dashed var(--border-color);
   color: var(--paragraph-color);
   display: flex;
   align-items: center;
