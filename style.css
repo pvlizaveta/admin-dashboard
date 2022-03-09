@@ -5,14 +5,15 @@
   --shadow-color: #00000036;
   --muted-color: rgb(100, 155, 250);
   --paragraph-color: rgb(90, 98, 112);
-  --primary-color: rgb(25, 80, 175);
+  --primary-color: #1540a7;
   --danger-color: rgb(255, 96, 149);
   --success-color: rgb(108, 173, 83);
-  --warning-color: rgb(25, 80, 175);
+  --warning-color: rgb(4, 64, 167);
   --attention-color: rgb(250, 179, 48);
   --happy-color: rgb(69, 156, 156);
   --icon-color: #f1f1f1;
   --border-color: rgb(167, 178, 207);
+  --numbers-font: "Hubballi", cursive;
 
   --font: "Raleway", sans-serif;
   --light-font: 200;
@@ -40,6 +41,7 @@
   --primary-color: rgb(224, 224, 224);
   --icon-color: rgb(224, 224, 224);
   --border-color: rgb(90, 96, 112);
+  --warning-color: rgb(31, 166, 255);
 }
 
 * {
@@ -74,6 +76,9 @@ body {
   gap: 1.8rem;
   grid-template-columns: 14rem auto 23rem;
 }
+.numbers {
+  font-family: var(--numbers-font);
+}
 a {
   color: var(--text-color);
 }
@@ -82,7 +87,8 @@ img {
   width: 100%;
 }
 
-h1 {
+h1,
+h1.numbers {
   font-weight: var(--heavy-font);
   font-size: 1.9rem;
 }
@@ -116,6 +122,11 @@ small {
 
 p {
   color: var(--paragraph-color);
+}
+
+p.numbers {
+  color: var(--paragraph-color);
+  font-size: 1.2em;
 }
 
 b {
@@ -241,7 +252,7 @@ main .date {
 
 main .date input[type="date"] {
   background: transparent;
-  color: var(--background-color);
+  color: var(--text-color);
 }
 main .insights {
   display: grid;
@@ -374,7 +385,12 @@ main .recent-orders a {
   margin: 1rem auto;
   color: var(--muted-color);
 }
-
+.recent-orders td.numbers {
+  font-size: 1.1rem;
+}
+.recent-orders td.details {
+  font-size: 0.88rem;
+}
 /* ======================== RIGHT ===== */
 .right {
   margin-top: 1.4rem;

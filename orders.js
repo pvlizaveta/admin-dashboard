@@ -2,7 +2,7 @@ const Orders = [
   {
     productName: "Calcium, Magnesium & Zink, 100 Caplets",
     productNumber: "003255",
-    paymentStatus: "Due",
+    paymentStatus: "Paid",
     shipping: "Pending",
   },
   {
@@ -41,7 +41,7 @@ Orders.forEach((order) => {
   const tr = document.createElement("tr");
   const trContent = `
     <td>${order.productName}</td>
-    <td>${order.productNumber}</td>
+    <td class="numbers">${order.productNumber}</td>
     <td>${order.paymentStatus}</td>
     <td class="${
       order.shipping === "Canceled"
@@ -52,7 +52,7 @@ Orders.forEach((order) => {
         ? "success"
         : "primary"
     }">${order.shipping}</td>
-    <td class="primary">Details</td>
+    <td class="details text-muted">Details</td>
   `;
   tr.innerHTML = trContent;
   document.querySelector("table tbody").appendChild(tr);
