@@ -328,15 +328,18 @@ main .insights svg circle {
 main .insights .sales svg circle {
   stroke-dashoffset: -30;
   stroke-dasharray: 180;
+  z-index: 2;
 }
 main .insights .expenses svg circle {
   stroke-dashoffset: 10;
   stroke-dasharray: 80;
+  z-index: 2;
 }
 
 main .insights .income svg circle {
   stroke-dashoffset: -30;
   stroke-dasharray: 230;
+  z-index: 2;
 }
 
 main .insights .progress .number {
