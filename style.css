@@ -738,18 +738,12 @@ main .recent-orders a {
   }
   .right {
     width: 94%;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
   }
   .right .top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    align-items: center;
-    padding: 0 0.8rem;
     height: 4.6rem;
     background-color: var(--card-background-color);
     width: 100%;
-    margin: 0;
     z-index: 2;
     box-shadow: 0 1rem 1rem var(--shadow-color);
   }
@@ -759,7 +753,12 @@ main .recent-orders a {
     left: 60%;
   }
   .right .top .profile img {
-    right: 0;
+    position: absolute;
+    width: 2.9rem;
+    height: auto;
+    right: 10px;
+    border-radius: 30px;
+    margin-top: 0;
   }
   .right .profile .info {
     display: none;
