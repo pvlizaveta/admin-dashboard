@@ -613,6 +613,9 @@ main .recent-orders a {
   main .recent-orders a {
     margin: 1.5rem;
   }
+  .right .top .profile img {
+    right: 0;
+  }
   .right .top {
     margin-top: 12rem;
   }
@@ -752,6 +755,9 @@ main .recent-orders a {
     width: 4.4rem;
     position: absolute;
     left: 60%;
+  }
+  .right .top .profile img {
+    right: 0;
   }
   .right .profile .info {
     display: none;
