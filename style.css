@@ -616,9 +616,7 @@ main .recent-orders a {
   main .recent-orders a {
     margin: 1.5rem;
   }
-  .right .top .profile img {
-    right: 0;
-  }
+
   .right .top {
     margin-top: 12rem;
   }
@@ -646,6 +644,7 @@ main .recent-orders a {
     cursor: pointer;
     position: absolute;
     left: 1rem;
+    color: var(--font-color);
   }
   .right .top button span {
     font-size: 2rem;
@@ -771,6 +770,7 @@ main .recent-orders a {
     cursor: pointer;
     position: absolute;
     left: 1rem;
+    color: var(--font-color);
   }
   .right .top button span {
     font-size: 2rem;
